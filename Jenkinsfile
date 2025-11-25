@@ -57,7 +57,7 @@ pipeline {
             steps {
                 script {
                     def scannerHome = tool 'SONAR'  //  ←✔ Nombre de la instalacion
-                    withSonarQubeEnv('SonarServer') {
+                    withSonarQubeEnv('SonarQube') {
                         sh """
                             ${scannerHome}/bin/sonar-scanner \
                                 -Dsonar.projectKey=${PROJECT_NAME} \
