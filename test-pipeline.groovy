@@ -72,7 +72,7 @@ pipeline {
         stage('Dependency Check') {
             steps {//  ←✔ Copia y pega la key en api key
                 dependencyCheck(
-                    additionalArguments: "--scan . --format HTML --out dependency-check-report --enableExperimental --enableRetired --nvdApiKey eafa3341-5ae9-46a7-9673-131a55fad55f", 
+                    additionalArguments: "--scan . --format HTML --out dependency-check-report --enableExperimental --enableRetired --nvdApiKey fbe5db98-60ff-4305-be32-13e687cf7bbc", 
                     odcInstallation: 'DependencyCheck'  //  ←✔ Nombre de la instalacion
                 )
             }
@@ -90,4 +90,5 @@ pipeline {
             echo "Build failed"
         }
     }
+
 }
